@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+import colors as c
+
+import time
+
+seconds = 0
+try:
+    while True:
+        print(c.clear)
+        print(c.base3 + 'Type control c to stop the program.')
+        print(c.base3 + "It has been " +  c.base1 + str(seconds) + c.base3 + " seconds since this program started.") 
+        seconds += 1
+        time.sleep(0.5)
+except KeyboardInterrupt:
+    print(c.base3 + '\b\bGood bye.')
+    exit()

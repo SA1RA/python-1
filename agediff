@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+
+import colors as c
+
+print(c.clear)
+
+def get_person():
+    name = input(c.yellow + 'enter the name of person:').strip().title()
+    age = input(c.reset + c.green + 'enter the age of person:').strip()
+    try:
+        age = int(age)
+    except ValueError:
+        print('please type it in using numbers')
+        exit(1)
+    return (name,age)
+
+name1,age1 = get_person()
+name2,age2 = get_person()
+
+diff = abs(age1 - age2)
+
+print('the first person and the second person are ' +  str(diff) + ' years apart')

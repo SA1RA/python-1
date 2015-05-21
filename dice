@@ -1,0 +1,74 @@
+#!/usr/bin/env python3
+
+import colors as c
+
+import random as r
+
+die = [None]
+
+try:
+    die.append('''
+     -------
+    |       |
+    |   •   |
+    |       |
+     -------
+    ''')
+
+    die.append('''
+     -------
+    | •     |
+    |       |
+    |     • |
+     -------
+    ''')
+
+    die.append('''
+     -------
+    | •     |
+    |   •   |
+    |     • |
+     -------
+    ''')
+
+    die.append('''
+     -------
+    | •   • |
+    |       |
+    | •   • |
+     -------
+    ''')
+
+    die.append('''
+     -------
+    | •   • |
+    |   •   |
+    | •   • |
+     -------
+    ''')
+
+    die.append('''
+     -------
+    | •   • |
+    | •   • |
+    | •   • |
+     -------
+    ''')
+
+    die.append(c.orange + '''
+     BoInk!!
+     -------
+    | •   • |
+    |   .   |
+    | \___/ |
+     -------
+    ''' + c.base2)
+
+    while True:
+        number = r.randint(1,7)
+        print(c.clear)
+        print(c.base2 + die[number])
+        input('> ')
+except KeyboardInterrupt:
+     print(c.clear)
+     exit()

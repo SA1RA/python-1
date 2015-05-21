@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+
+import colors as c
+import time
+
+number = 100
+
+try:
+    for count in range(number):
+      print(count)
+      time.sleep(0.5)
+except KeyboardInterrupt:
+     print(c.clear)
+     exit()

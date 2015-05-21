@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+
+import time
+import colors as c
+
+try:
+    while True:
+        print('begin')
+        for verse in range(3):
+            for count in range(13):
+                print(c.red,count,"Badgers")
+                time.sleep(0.3)
+            for count in range(2):
+                print(c.yellow,count,"Mushroom")
+                time.sleep(0.5)
+except KeyboardInterrupt:
+    (c.clear + '\b\b')
+    exit()

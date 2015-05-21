@@ -1,0 +1,52 @@
+#!/usr/bin/python3
+
+import colors as c
+
+print(c.clear)
+print(c.blue + '''
+Who would cross the bridge of death
+must answer me these questions 3
+'ere the other side he see:
+''')
+
+def die():
+    print(c.reset + c.red + 'You are cast into the gorge of Eternal peril.')
+    print(c.reset + c.red + 'pppkkaaacchhchch!!!')
+
+def live():
+    print(c.reset + c.green + 'You pass.')
+    print(c.reset + c.green + 'Ok, off you go.')
+
+def ask(question):
+    print(question)
+    return input('> ').strip().lower()
+
+name = ask('What is your name?')
+
+quest = ask('What is your quest?')
+
+if 'lancelot' in name or 'galahad' in name:
+    color = ask('What is your favorite color?')
+    if color == 'blue':
+        live()
+    else:
+        die()
+
+elif 'robin' in name:
+    capital = ask(c.reset + c.blue + 'What is the capital of Assyria?')
+    if ('assur' in capital):
+        live()
+    else:
+        die()
+
+elif 'arthur' in name:
+    answer = ask(c.reset + c.blue + 'what... is the air-speed velocity of an unladen swallow?')
+    if ('african' in answer and 'european' in answer) or '21' in answer:
+        print(c.reset + c.yellow + 'What? I dont know that.')
+        print(c.reset + c.red + 'pppkkkuuurchchch!!!')
+        print(c.reset + c.green + 'Random knight: How do you know so much about swallows?')
+        print('king arthur: Well, you have to know these things when your king you know.')
+else:
+    print(c.reset + c.red + 'your not a knight')
+    print(c.reset + c.red + 'You are unworthy')
+    die()
