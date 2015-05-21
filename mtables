@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+
+import colors as c
+import time
+
+while True:
+    
+    print('what multiple cation table do you want')
+    number = input('> ')
+
+    for count in range(1,13):
+        equals = (int(number) * count)
+        print(str(number) + ' x ' + str(count) + ' = ' + str(equals))

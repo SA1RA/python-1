@@ -12,9 +12,7 @@ while True:
     try:
         print(c.clear + c.base3 + 'Print Ctrl C to quit.')
         print('hundredths, seconds and minutes.')
-        print(hundredths)
-        print(seconds)
-        print(minutes)
+        print(str(hundredths) + ' : ' + str(seconds) + ' : ' + str(minutes))
         time.sleep(0.01)
         hundredths += 1
         if hundredths == 100:
