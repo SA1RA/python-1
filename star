@@ -8,9 +8,6 @@ print(c.clear)
 
 try:
     while True:
-        print('|')
-        time.sleep(.15)
-        print(c.clear)
         print('/')
         time.sleep(.15)
         print(c.clear)

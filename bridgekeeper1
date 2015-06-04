@@ -2,35 +2,43 @@
 
 import colors as c
 
-print(c.red + "Who would cross the bridge of death, must answer me these questions 3, ere the other side he see.")
+print(c.clear + c.red + '''Who would cross the bridge of death,
+must answer me these questions 3, 
+ere the other side he see.
+''' + c.reset)
 
 def prompt(question):
     print(question)
-    answer = input("> ")
+    answer = input(c.blue + "> " + c.reset).strip().lower()
     return answer
 
-name = prompt("What is your name?")
-quest = prompt("What is your quest?")
+def die():
+    print(c.red + 'you have been cast into the pit of eternal peril!' + c.reset)
+def live():
+    print(c.green + 'Ok off you go.' + c.reset)
 
-if name == "lanceolot":
-    color = prompt("What is you faovrite colour?")
+name = prompt(c.yellow + "What is your name?" + c.reset)
+quest = prompt(c.yellow + "What is your quest?" + c.reset)
+
+if name == "lanceolot" or name == "galihad":
+    color = prompt(c.yellow + "What is you faovrite colour?" + c.reset)
     if color == "blue":
-        print("ok off you go.")
+        live()
     else:
-        print("paaacheeewww!! off you go baaccaa you have been cast into the gorge of 10,003 upturned lances and 1 spoon.")
+        die()
 
 
-elif name == "robin":
-    capital = prompt("What is the capital of Yemmen? heh heh heh.")
+elif "robin" in name:
+    capital = prompt(c.red + "What is the capital of Yemmen? heh heh heh." + c.reset)
     if capital == "that doesnt exist":
-        print("fuwee ok off you pop then.")
+        print(c.green + "fuwee ok off you pop then." + c.reset)
     else:
-        print("paaacheeewww!! off you go baaccaa you have been cast into the gorge of 10,003 upturned lances and 1 spoon.")
+        die()
 
 
-elif name == "arthur":
-    swallow = prompt("what is the air speed volocity of an unladen swallow.")
-    if swallow == "african or european":
-        print("What i dont know that. pppechheew ahhhhh!!")
-    else:
-        print("paaacheeewww!! off you go baaccaa you have been cast into the gorge of 10,003 upturned lances and 1 spoon.")        
+elif "arthur" in name:
+    swallow = prompt(c.yellow + "what is the air speed volocity of an unladen swallow." + c.reset)
+    if "african or european" in swallow:
+        print(c.red + "What i dont know that. pppechheew ahhhhh!!")
+    elif "24mph" in swallow:
+        live()
