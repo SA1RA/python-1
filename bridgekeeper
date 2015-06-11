@@ -3,10 +3,10 @@
 import colors as c
 
 print(c.clear)
-print(c.blue + '''
-Who would cross the bridge of death
-must answer me these questions 3
-'ere the other side he see:
+print(c.red + '''
+Who would cross the bridge of death,
+must answer me these questions 3,
+ere the other side he see.
 ''')
 
 def die():
@@ -20,13 +20,14 @@ def live():
 def ask(question):
     print(question)
     return input('> ').strip().lower()
+    ask(question):
 
-name = ask('What is your name?')
+name = ask(c.yellow + 'What is your name?' + c.reset)
 
-quest = ask('What is your quest?')
+quest = ask(c.yellow + 'What is your quest?' + c.reset)
 
 if 'lancelot' in name or 'galahad' in name:
-    color = ask('What is your favorite color?')
+    color = ask(c.yellow + 'What is your favorite color?' + c.reset)
     if color == 'blue':
         live()
     else:

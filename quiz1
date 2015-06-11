@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+
+import colors as c
+import time as t
+import random as r
+
+print(c.clear)
+print(c.base3 + 'samuel lucas is not responsible for anything in this quiz.' + c.reset)
+print(c.yellow + 'welcome to the quiz game for unicorn hunters.' + c.reset)
+
+
+def pink():
+    print(c.red  + 'What is the color of the pink fluffy unicorn?')
+    pink == input('> ').strip().lower()
+    if pink == 'pink':
+        return True
+    else:
+        return False
+
+def rainbows():
+    print(c.red + 'What is the pink fluffy unicorn dancing on?')
+    rainbows == input('> ').strip().lower()
+    if rainbows == 'rainbows':
+        return True
+    else:
+        return False
+
+def smiles():
+    print(c.red + 'How do we describe the pink fluffy unicorns fur?')
+    smiles == input('> ').strip().lower()
+    if smiles == 'smiles':
+        return True
+    else:
+        return False
+
+question = (pink(),rainbows(),smiles())
+
+while questions:
+    question = random.choice(questions)
+    answer = question()
+    if answer:
+        questions.remove(question)
