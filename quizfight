@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+
+import random
+import colors as c
+
+print(c.clear)
+print(c.blue + '''
+You are a knight and you have been chalanged to a dual by another knight.
+type what you want to do bellow.
+''')
+
+
+def q1():
+    print(c.orange  + '(accept or decline)')
+    answer = input('> ').strip().lower()
+    if "accept" in answer:
+        print(c.green + 'You have accepted the dual.')
+    else:
+        print(c.red + 'The other knight replies "Fine run you cowared."')
+        exit()
+
+def q2():
+    print(c.blue + 'he swing to the left.')
+    print(c.orange  + '(block left or block right)')
+    answer = input('> ').strip().lower()
+    if "block left" in answer:
+        print(c.green + 'You blocked his cut.')
+    else:
+        print(c.red + 'The other knight cuts your side and you die.')
+        exit()
+
+def q3():
+    print(c.blue + 'he thrusts right.')
+    print(c.orange  + '(block left or block right)')
+    answer = input('> ').strip().lower()
+    if "block right" in answer:
+        print(c.green + 'You blocked his thrust')
+    else:
+        print(c.red + 'The other knight cuts your side and you die.')
+        exit()
+
+def q4():
+    print(c.blue + 'he is exausted try to attack')
+    print(c.orange  + '(attack or wait)')
+    answer = input('> ').strip().lower()
+    if "attack" in answer:
+        print(c.green + 'You stab in the chest and he dies you have won the dual.')
+    else:
+        print(c.red + 'The other knight ran you through and you die.')
+        exit()
+
+q1()
+q2()
+q3()
+q4()
