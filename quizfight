@@ -21,7 +21,7 @@ def q1():
 
 def q2():
     print(c.blue + 'he swing to the left.')
-    print(c.orange  + '(block left or block right)')
+    print(c.orange  + '(block left, block right, or attack)')
     answer = input('> ').strip().lower()
     if "block left" in answer:
         print(c.green + 'You blocked his cut.')
@@ -31,25 +31,72 @@ def q2():
 
 def q3():
     print(c.blue + 'he thrusts right.')
-    print(c.orange  + '(block left or block right)')
+    print(c.orange  + '(deflect left, deflect right, or attack)')
     answer = input('> ').strip().lower()
-    if "block right" in answer:
+    if "deflect right" in answer:
         print(c.green + 'You blocked his thrust')
     else:
-        print(c.red + 'The other knight cuts your side and you die.')
+        print(c.red + 'The other knight ran you throughdie.')
         exit()
 
 def q4():
     print(c.blue + 'he is exausted try to attack')
-    print(c.orange  + '(attack or wait)')
+    print(c.orange  + '(attack, or take a defensive poster)')
     answer = input('> ').strip().lower()
     if "attack" in answer:
-        print(c.green + 'You stab in the chest and he dies you have won the dual.')
+        print(c.green + 'You stab the other knight in the chest in the chest and he is now wounded and will attack less.')
+    else: 
+        print(c.blue + 'he thrusts left.')
+        print(c.orange  + '(deflect left, deflect right, or attack)')
+        answer = input('> ').strip().lower()
+        if "block left" in answer:
+            print(c.green + 'You deflected his thrust')
+        else:
+            print(c.red + 'the other knight ran you through and you die.')
+            exit()
+
+def q5():
+    print(c.blue + 'he swings right and then thrusts left')
+    print(c.orange  + '(block right deflect left, block left block right right, or attack)')
+    answer = input('> ').strip().lower()
+    if "block right deflect left" in answer:
+        print(c.green + 'You stab the other knightin the chest and he is now wounded and will attack less.')
     else:
         print(c.red + 'The other knight ran you through and you die.')
         exit()
+
+
+def q6():
+    print(c.blue + 'he swing to the left.')
+    print(c.orange  + '(block left, block right, or attack)')
+    answer = input('> ').strip().lower()
+    if "block left" in answer:
+        print(c.green + 'You blocked his cut.')
+    else:
+        print(c.red + 'The other knight cuts your side and you die.')
+        exit()
+
+
+def q7():
+    print(c.blue + 'he is exausted try to attack')
+    print(c.orange  + '(attack, or take a defensive poster)')
+    answer = input('> ').strip().lower()
+    if "attack" in answer:
+        print(c.green + 'You stab the other knight in the chest in and he dies you win the dual.')
+    else: 
+        print(c.blue + 'he hacks from above.')
+        print(c.orange  + '(cross block up, block  right, block left, or attack)')
+        answer = input('> ').strip().lower()
+        if "cross block up" in answer:
+            print(c.green + 'You blocked his cut')
+        else:
+            print(c.red + 'the other knight cut you from above and you die.')
+            exit()
 
 q1()
 q2()
 q3()
 q4()
+q5()
+q6()
+q7()
