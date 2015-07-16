@@ -39,16 +39,6 @@ def q3():
         lose()
         return 0
 
-def win():
-    print(c.reset + c.green + 'You have completed the redstone quiz.')
-
-def lose():
-    print(c.reset + c.red + 'You are wrong.')
-
-def ask(question):
-    print(question)
-    return input('> ').strip().lower()
-
 questions = [q1,q2,q3]
 
 while questions:

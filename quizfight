@@ -130,8 +130,11 @@ try:
                              and cleaves you from above and you die.''')
             exit()
 
-    questions = random.choice`(q1,q2,q3,q4,q5,q6,q7,q8)
-    q1()
+    questions = [q1,q2,q3,q4,q5,q6,q7,q8]
+
+    while questions:
+        question = random.choice(questions)
+        questions.remove(question)
 
 except KeyboardInterrupt:
     print(c.clear)

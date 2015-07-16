@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+
+import colors as c
+from util import ask
+
+print(c.clear)
+
+text2 = '''the pit from training would make a good story.'''
+
+
+text = '''Welcome to the Arena madlibs a bad mispelled story fair warning.
+
+Welcome to the arena you {action1} through the door.
+What you find inside is an {advetive1} decorated hall.
+Any ways you {action4} through the door into a wonderously decorated arena.
+When you walk through the door a {person2} challanges
+you to a dual. You and the {person2} face off in the arena. 
+In one corner there is a bucket of {item_plural} and a {item} in the middle of the floor.
+{person2} draws a {item2} and takes the 2nd place on the other side of the arena.
+You {action5} toward each other.
+{person2} strikes at with the {item2} you but you {action6} {person2} in the face
+'''
+
+words = {
+    "action1" : None,
+    "action2" : None,
+    "person1" : None,
+    "adjective1" : None,
+    "action4" : None,
+    "action5" : None,
+    "action6" : None,
+    "person2" : None,
+    "item_plural" : None,
+    "item" : None,
+    "item2" : None
+}
+
+answers = {}
+for key in words:
+    answers = ask("Enter " + key + ": ")
+    answer[key] = answers
+
+print(text.format(**answers))
