@@ -14,21 +14,26 @@ That is all you should need to know have fun.''')
 print(c.blue + '''
 You are a knight from a far off land. You are traveling through a village and you
 stop to look at a platform with 5 knights standing on it challenging near by people.
-One of the knights looks your way and says "You fight me in the arena.
-challenged to a dual by another knight.
+One of the knights looks your way and says You fight me in the arena.
+You have been challenged to a dual by the other knight.
 type what you want to do bellow.
 ''')
 
 
 try:
+
+    score = 0
+
     def q1():
         print(c.orange  + '(accept or decline)')
         answer = input(c.base2 + '> ').strip().lower()
         if "accept" in answer:
             print(c.clear)
             print(c.green + 'You have accepted the dual.')
+            return 1
         else:
-            print(c.red + 'The other knight replies "Fine run you cowared."')
+            print(c.red + 'The other knight replies "Fine run you coward."')
+            return 0
             exit()
 
     def q2():
@@ -38,8 +43,10 @@ try:
         if "block left" in answer:
             print(c.clear)
             print(c.green + 'You blocked his cut.')
+            return 1
         else:
-            print(c.red + 'The other knight cuts your side and you die.')
+            print(c.red + 'The other knight cuts your side.')
+            return 0
             exit()
 
     def q3():
@@ -49,18 +56,21 @@ try:
         if "deflect right" in answer:
             print(c.clear)
             print(c.green + 'You blocked his thrust')
+            return 0
         else:
-            print(c.red + 'The other knight ran you through and you die.')
+            print(c.red + 'The other knight ran you through.')
+            return 0
             exit()
 
     def q4():
-        print(c.blue + 'he is exausted try to attack')
+        print(c.blue + 'instead of attacking he takes a defensive poster')
         print(c.orange  + '(attack, or take a defensive poster)')
         answer = input(c.base2 + '> ').strip().lower()
         if "attack" in answer:
             print(c.clear)
             print(c.green + '''You stab the other knight in the chest
             he is now wounded and will attack less.''')
+            return 1
         else: 
             print(c.blue + 'he thrusts left.')
             print(c.orange  + '(deflect left, deflect right, or attack)')
@@ -68,8 +78,10 @@ try:
             if "deflect left" in answer:
                 print(c.clear)
                 print(c.green + 'You deflected his thrust')
+                return 1
             else:
-                print(c.red + 'the other knight ran you through and you die.')
+                print(c.red + 'the other knight ran you through.')
+                return 0
                 exit()
 
     def q5():
@@ -78,33 +90,37 @@ try:
         answer = input(c.base2 + '> ').strip().lower()
         if "block right deflect left" in answer:
             print(c.clear)
-            print(c.green + '''You stab the other knight in the chest
-                            and he is now wounded and will attack less.''')
+            print(c.green + '''the other knight is exhausted and will attack less.''')
+            return 1
         else:
-            print(c.red + 'The other knight ran you through and you die.')
+            print(c.red + 'The other knight ran you through.')
+            return 0
             exit()
 
 
     def q6():
-        print(c.blue + 'he swing to the left.')
+        print(c.blue + 'he swings to the left.')
         print(c.orange  + '(block left, block right, or attack)')
         answer = input(c.base2 + '> ').strip().lower()
         if "block left" in answer:
             print(c.clear)
             print(c.green + 'You blocked his cut.')
+            return 1
         else:
-            print(c.red + 'The other knight cuts your side and you die.')
+            print(c.red + 'The other knight cuts your side.')
+            return 0
             exit()
 
 
     def q7():
-        print(c.blue + 'he is exausted try to attack')
+        print(c.blue + 'instead of attacking the other knight lowers his sword and waits')
         print(c.orange  + '(attack, or take a defensive poster)')
         answer = input(c.base2 + '> ').strip().lower()
         if "attack" in answer:
             print(c.clear)
             print(c.green + '''You stab the other knight in the chest
                             and he dies you win the dual.''')
+            return 1
             exit()
         else: 
             print(c.blue + 'he cleaves down.')
@@ -112,29 +128,42 @@ try:
             answer = input(c.base2 + '> ').strip().lower()
             if "cross block up" in answer:
                 print(c.green + 'You blocked his cut')
+                return 1
             else:
                 print(c.red + 'the other knight cleaves you from above and you die.')
+                return 0
                 exit()
 
     def q8():
-        print(c.blue + 'he is exausted try to attack')
+        print(c.blue + 'instead of attacking the other knight waits')
         print(c.orange  + '(attack, or take a defensive poster)')
-        answer = input(base2 + '> ').strip().lower()
+        answer = input(c.base2 + '> ').strip().lower()
         if "attack" in answer:
             print(c.clear)
-            print(c.green + '''You stab the other knight in the chest
-                               and he dies you win the dual.''')
+            print(c.green + '''You stab the other knight in the chest.''')
+            return 1
             exit()
         else:
             print(c.red + '''the other knight made a desperate move
-                             and cleaves you from above and you die.''')
+                             and cleaves you from above.''')
+            return 0
             exit()
+    
+    q1()
 
-    questions = [q1,q2,q3,q4,q5,q6,q7,q8]
+    questions = [q2,q3,q4,q5,q6,q7,q8]
 
     while questions:
         question = random.choice(questions)
-        questions.remove(question)
+        points = question()
+        score += points
+        if points:
+            questions.remove(question)
+    print(c.reset + c.green + '''You have completed the dual.
+                                If your score was 6,5 you are wounded and die later of infection.
+                                If your score was 8,7, you win with only minor or no injurys.
+                                if your score was 4,0 you die a painfull death as the knight laughs at your corpse.
+                                score: ''', score)
 
 except KeyboardInterrupt:
     print(c.clear)
