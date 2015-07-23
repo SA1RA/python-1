@@ -1,0 +1,66 @@
+#!/usr/bin/env python3
+
+import colors as c
+from utils import ask
+import time
+import random
+
+sides = [ ]
+
+
+sides.append('''
+ ------- 
+|Ichi   |
+|       |
+|      1|
+ -------
+''')
+
+sides.append('''
+ -------
+|Ni     |
+|       |
+|      2|
+ -------
+''')
+
+sides.append('''
+ -------
+|San    |
+|       |
+|      3|
+ -------
+''')
+
+
+sides.append('''
+ -------
+|Shi    |
+|       |
+|      4|
+ -------
+''')
+
+sides.append('''
+ -------
+|Go     |
+|       |
+|      5|
+ -------
+''')
+
+sides.append('''
+ -------
+|Roku   |
+|       |
+|      6|
+ -------
+''')
+
+print(c.clear)
+for side in sides:
+    side = random.choice(sides)
+    print(c.cyan + side)
+    time.sleep(1)
+time.sleep(3)
+print(c.clear)
