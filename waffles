@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+
+
+
+while True:
+    print("Do you like french toast?")
+    answer = input("> ")
+
+    if "yes i like french toast" in answer:
+        print("Do you like waffles?")
+        answer = input("> ")
+        if "yes i like waffles" in answer:
+            print("Well do you like pancakes?")
+            answer = input("> ")
+            if answer is "yes i like pancakes" in answer:
+                pass
+            else:
+                print("Well you make me sad")
+                exit()
+        else:
+            print("Well you make me sad")
+            exit()
+    else:
+        print("Well you make me sad")
+        exit()
+        
