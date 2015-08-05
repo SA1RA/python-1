@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+
+import random as r
+
+mine = [None]
+
+try:
+    mine.append('''
+ [o]
+''')
+
+    mine.append('''
+  [o]
+''')
+    mine.append('''
+   [o]
+'''
+    mine.append('''
+    [o]
+''')
+    mine.apppend('''
+     [o]
+''')
+    mine.append('''
+      [o]
+''')
+    mine.append('''
+       [o]
+''')
+    mine.append('''
+        [o]
+''')
+    mine.append('''
+         [o]
+''')
+    mine.append('''
+          [o]
+''')
+
+    while True:
+        number = r.randint(1,10)
+        print(c.clear)
+        print(mine[number])
+        input("> ")
+KeyboardInterrupt:
+    print(c.clear)
+    exit()
