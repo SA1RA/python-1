@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+
+print("do you like waffles")
+waffle = input("> ")
+if "yes" in waffle:
+    print("do you like pancakes")
+    pancake = input("> ")
+    if "yes" in pancake:
+        print("do you like french toast")
+        frenchtoast = input("> ")
+        if "yes" in frenchtoast:
+            print("good for you")
+        else:
+            print("you make me sad")
+    else:
+        print("you make me sad")
+else:
+    print("you make me sad")

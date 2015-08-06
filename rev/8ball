@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+
+while True:
+    input("> ")
+    print(answer)
+    answer = {"yes, "no"}

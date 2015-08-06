@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+
+while True:
+    enter = input("> ")
+    if enter:
+        print(dice())
+sides []
+
+sides {
+side.append("1"),
+side.append("1")
+}
