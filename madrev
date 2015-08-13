@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+
+from util import ask
+
+text = '''meep {word}'''
+
+words = {
+  "word" : None
+}
+
+answers = {}
+for key in words:
+    answers = ask("enter " + key ": ")
+    answer[key] = answers
+
+
+print(text.format(**answers))
+  

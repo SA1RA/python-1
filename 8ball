@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+
+import random
+
+answers =[
+  'yes',
+  'no',
+]
+
+while True:
+    question = input("> ")
+
+    if question == 'meercat + camo =':
+        print("Marpat")
+
+        exit()
+
+    print(random.choice(answers))
+
+
+answers =[
+    'yes',
+    'no',
+]
+
+while True:
+    question = input("> ")
+
+    if question == "bye":
+        print("ok bye")
+
+        exit()
+
+    print(random.choice(answers))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

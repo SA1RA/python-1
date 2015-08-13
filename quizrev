@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+
+import random
+
+score = 0
+
+def q1():
+    print("what is the first letter of the alphabet?")
+    answer = input("> ").lower().strip()
+    if answer == 'a':
+        return 1
+    else:
+        return 0
+
+questions = [q1]
+
+while questions:
+    question = random.choice(questions)
+    points = question()
+    score += points
+    if points:
+        questions.remove(question)

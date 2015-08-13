@@ -47,4 +47,3 @@ while questions:
     score += points
     if points:
         questions.remove(question)
-print(c.reset + c.green + 'You have completed the test, score: ', score)

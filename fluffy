@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from util import ask
+from utils import ask
 import colors as c
 import time as t
 import random
