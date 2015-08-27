@@ -19,3 +19,26 @@ if __name__ == '__main__':
 
 """-----------------------------------"""
 
+
+def ask(question):
+    print(question)
+    answer = input("> ").strip().lower()
+    return answer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

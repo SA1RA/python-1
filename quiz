@@ -36,7 +36,6 @@ def q3():
         print(c.reset + c.green + 'Correct.')
         return 1
     else:
-        lose()
         return 0
 
 questions = [q1,q2,q3]
@@ -47,3 +46,4 @@ while questions:
     score += points
     if points:
         questions.remove(question)
+        

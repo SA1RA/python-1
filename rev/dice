@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 
-sides = ["1","2"]
+import random as r
 
-for side in sides:
-    print("is side", side)
+die = [None]
+
+die.append("1")
+die.append("2")
+
+while True:
+    number = r.randint(1,2)
+    print(die[number])
+    input("> ")

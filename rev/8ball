@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
+import random
+
+answers =[
+    "yes",
+    "no",
+]
 
 while True:
-    input("> ")
-    print(answer)
-    answer = {"yes, "no"}
+    question = input("> ")
+    if question == "bye":
+        print("ok bye")
+        exit()
+    print(random.choice(answers))

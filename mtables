@@ -11,3 +11,20 @@ while True:
     for count in range(1,13):
         equals = (int(number) * count)
         print(str(number) + ' x ' + str(count) + ' = ' + str(equals))
+
+
+#everything beyond this point is rev
+
+while True:
+    number = input("> ")
+    
+    for count in range(1,13):
+        equals = (int(number) * count)
+        prin(str(number) + ' x ' + str(count + ' = ' + str(equals))
+
+while True:
+    number = input("> ")
+
+    for count in range(1,23):
+        equals = (int(number) * count)
+        print(str(number) + ' x ' + str(count + ' = ' + str(equals))

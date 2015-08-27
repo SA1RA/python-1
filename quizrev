@@ -20,3 +20,39 @@ while questions:
     score += points
     if points:
         questions.remove(question)
+
+
+
+
+
+
+def q1():
+    print("?")
+    answer = input("> ")
+    if answer == "ok":
+        return 1
+    else:
+        return 0
+
+question = [q1]
+
+while questions:
+    question = random.choice(question)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

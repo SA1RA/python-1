@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+
+text = '''you {action}'''
+
+words =[
+    action,
+]
+
+words = input("> ")
+print(text)

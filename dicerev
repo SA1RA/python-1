@@ -52,6 +52,40 @@ while True:
     input("> ")
 
 
+die = [None]
+
+die.append("1")
+die.append("2")
+
+while True:
+    number = r.randint(1,2)
+    print(die[number])
+    input("> ")
+
+
+
+
+
+
+die = [None]
+
+die.append["1"]
+die.append["2"]
+
+while True:
+    number = r.randint(1,2)
+    print(die[number])
+    input("> ")
+
+
+
+
+
+
+
+
+
+
 
 
 

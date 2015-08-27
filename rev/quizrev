@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+import random
+import time
+
+def q1():
+    print("what is your favorite color?")
+    answer = input("> ")
+    if answer == "blue":
+        print("correct")
+        exit()
+    else:
+        print("that is not your favorite color.")
+        exit()
+
+questions =[q1,]
+
+while questions:
+    question = random.choice(questions)
+    question()
+    time.sleep(5)
+    print("you waited to long")
+    exit()
